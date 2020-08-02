@@ -18,4 +18,27 @@ class QueryBuilder
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
+
+    public function insert($table,$data){
+        $sql = sprintf("insert into %s (%s) values (%s)",
+                    $table,
+                    implode(', ', array_keys($data)),
+                    ':'.implode(', :', array_keys($data)),
+                );
+
+//        $statement->bindParams(':name',$data['name']);  // for single level binding
+
+        /*
+
+            dd(array_map(function ($val){
+                return ": $val";
+            }, array_values($data)));
+
+        */
+
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute($data);
+
+        header("location : /");
+    }
 }
