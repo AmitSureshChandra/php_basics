@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $users = $app['database']->selectAll('users');
+    $users = App::get('database')->selectAll('users');
 }
 catch (Exception $exception){
     echo $exception->getMessage();

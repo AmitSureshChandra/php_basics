@@ -9,7 +9,7 @@
 
 <hr>
     <?php
-        $tasks = $app['database']->selectAll('task');
+        $tasks = App::get('database')->selectAll('task');
     ?>
 <ul>
     <?php foreach ($tasks as $task) : ?>
@@ -28,10 +28,8 @@ require('views/partials/footer.php');
 
 <?php
     if (isset($_POST['name'])){
-        $app['database']->insert('task',[
+        App::get('database')->insert('task',[
                 'name' => $_POST['name'],
         ]);
     }
-    else
-        echo "<alert>enter name</alert>"
 ?>

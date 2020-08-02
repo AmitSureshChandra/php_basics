@@ -39,6 +39,7 @@ class QueryBuilder
         $statement = $this->pdo->prepare($sql);
         $statement->execute($data);
 
-        header("location : /");
+        header("Location : /");
+        exit;
     }
 }
