@@ -29,9 +29,19 @@ class Router{
     public function direct($uri,$requestType)
     {
         $uri = trim($uri,'/');
-        if (array_key_exists($uri,$this->routes[$requestType]))
-            return $this->routes[$requestType][$uri];
+        if (!array_key_exists($uri,$this->routes[$requestType]))
+            throw new  Exception('no route exist');
 
-        return new Exception('no route exist');
+        $this->callAction(...explode('@',$this->routes[$requestType][$uri]));
+
+    }
+
+    private function callAction($action_controller, $action_method)
+    {
+        $controller = new $action_controller();
+        if (method_exists($controller , $action_method))
+            return $controller->$action_method();
+
+        throw new Exception("$action_method doesn't exist in $action_controller");
     }
 }
