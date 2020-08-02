@@ -11,7 +11,7 @@ class PageController extends Controller
             echo $exception->getMessage();
         }
 
-        return view('index');
+        return view('index', compact('users'));
     }
 
     public function about(){
