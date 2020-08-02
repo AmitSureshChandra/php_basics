@@ -11,18 +11,18 @@ class PageController extends Controller
             echo $exception->getMessage();
         }
 
-        include 'views/index.view.php';
+        return view('index');
     }
 
     public function about(){
-        require 'views/about.view.php';
+        return view('about');
     }
 
     public function contact(){
-        require 'views/contact.view.php';
+        return view('contact');
     }
 
     public function addTask(){
-        require 'views/add_task.view.php';
+        return view('add_task');
     }
 }

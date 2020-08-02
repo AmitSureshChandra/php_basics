@@ -5,3 +5,7 @@ function dd($data){
     var_dump($data);
     echo "</pre>";
 }
+
+function view($name){
+    return require "views/{$name}.view.php";
+}
