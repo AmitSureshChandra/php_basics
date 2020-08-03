@@ -5,7 +5,10 @@ require('views/partials/header.php');
 
 <hr>
 
-<h1>About</h1>
+<h1>
+    About <?=$company ?>
+
+</h1>
 
 <hr>
 

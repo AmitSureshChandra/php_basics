@@ -1,6 +1,9 @@
 
 <?php
-    require('views/partials/header.php');
+
+use App\Core\App;
+
+require('views/partials/header.php');
 ?>
 
 <hr>
@@ -17,7 +20,7 @@
     <?php  endforeach; ?>
 </ul>
 
-<form action="/add-task" method="post">
+<form action="/tasks/store" method="post">
     <input type="text" name='name'>
     <input type="submit" value="Add Task">
 </form>

@@ -1,5 +1,13 @@
 <?php
 
+namespace App\Core;
+
+use App\Controller\Controller;
+use App\Controller\PageController;
+use App\Controller\TaskController;
+
+use Exception;
+
 class Router{
 
     protected $routes = [
@@ -38,6 +46,7 @@ class Router{
 
     private function callAction($action_controller, $action_method)
     {
+        $action_controller = "App\\Controller\\".$action_controller;
         $controller = new $action_controller();
         if (method_exists($controller , $action_method))
             return $controller->$action_method();

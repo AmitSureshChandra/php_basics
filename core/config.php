@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core;
+
+use PDO;
+
 return  [
     'database' => [
         'dbname' => 'mlt',
