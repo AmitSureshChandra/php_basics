@@ -1,5 +1,6 @@
 <?php
 
+
 function dd($data){
     echo "<pre>";
     var_dump($data);
@@ -8,7 +9,7 @@ function dd($data){
 
 function view($name,$data=[]){
     extract($data);
-    return require "views/{$name}.view.php";
+    return require "app/views/{$name}.view.php";
 }
 
 function redirect($path){

@@ -11,5 +11,5 @@
 <body>
 
 <?php
-    require('views/partials/nav.php')
+require('app/views/partials/nav.php')
 ?>

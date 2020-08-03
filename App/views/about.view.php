@@ -1,6 +1,6 @@
 
 <?php
-require('views/partials/header.php');
+require('app/views/partials/header.php');
 ?>
 
 <hr>
@@ -19,5 +19,5 @@ require('views/partials/header.php');
 </ul>
 
 <?php
-require('views/partials/footer.php');
+require('app/views/partials/footer.php');
 ?>

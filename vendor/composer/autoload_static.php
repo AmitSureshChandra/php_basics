@@ -18,6 +18,8 @@ class ComposerStaticInit8dd10532ce04ff507a77698f7322c12d
         'ComposerAutoloaderInit8dd10532ce04ff507a77698f7322c12d' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit8dd10532ce04ff507a77698f7322c12d' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Model' => __DIR__ . '/../..' . '/App/Models/Model.php',
+        'Task' => __DIR__ . '/../..' . '/App/Models/Task.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -3,11 +3,12 @@
 namespace App\Controller;
 
 use App\Core\App;
+use Task;
 
 class TaskController extends Controller
 {
     public function index(){
-        $tasks = App::get('database')->selectAll('task');
+        $tasks = Task::all();
         return view('task',compact('tasks'));
     }
 

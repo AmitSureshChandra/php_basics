@@ -3,7 +3,7 @@
 
 use App\Core\App;
 
-require('views/partials/header.php');
+require('app/views/partials/header.php');
 ?>
 
 <hr>
@@ -26,7 +26,7 @@ require('views/partials/header.php');
 </form>
 
 <?php
-require('views/partials/footer.php');
+require('app/views/partials/footer.php');
 ?>
 
 <?php

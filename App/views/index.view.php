@@ -1,6 +1,6 @@
 
 <?php
-    require('views/partials/header.php');
+    require('app/views/partials/header.php');
     ?>
 
     <hr>
@@ -12,5 +12,5 @@
         <li> fork and update </li>
     </ul>
     <?php
-        require('views/partials/footer.php');
+        require('app/views/partials/footer.php');
     ?>

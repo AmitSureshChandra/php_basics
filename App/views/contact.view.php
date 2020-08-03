@@ -1,6 +1,5 @@
-
 <?php
-require('views/partials/header.php');
+require('app/views/partials/header.php');
 ?>
 <hr>
 <h1>Contact</h1>
@@ -11,5 +10,5 @@ require('views/partials/header.php');
     <li> email : akumar00029@gmail.com</li>
 </ul>
 <?php
-require('views/partials/footer.php');
+require('app/views/partials/footer.php');
 ?>
