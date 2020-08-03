@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 use App\Controller;
 use App\Controller\PageController;
 use App\Controller\TaskController;
